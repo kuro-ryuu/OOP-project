@@ -1,7 +1,10 @@
 import java.util.LinkedList;
 import java.util.Scanner;
-
+import java.time.format.DateTimeFormatter;
+import java.time.Instant;
+import java.time.ZoneId;
 public class OrientationTask1_3 {
+    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
     private static int nextId = 1;
     private int id;
     private long startTime;
@@ -41,6 +44,11 @@ public class OrientationTask1_3 {
         return endTime - startTime;
     }
 
+    private static String formatTime(long millis) {
+        return Instant.ofEpochMilli(millis)
+            .atZone(ZoneId.systemDefault())
+            .format(FORMATTER);
+    }
 
     public static void main(String[] args) {
 
@@ -56,7 +64,7 @@ public class OrientationTask1_3 {
                 case "queue":
                     OrientationTask1_3 OrientationTask1_3 = new OrientationTask1_3();
                     queue.addFirst(OrientationTask1_3);
-                    System.out.println("Customer " + OrientationTask1_3.getId() + " queued at " + OrientationTask1_3.getStartTime());
+                    System.out.println("Customer " + OrientationTask1_3.getId() + " queued at " + formatTime(OrientationTask1_3.getStartTime()));
                     break;
 
                 case "dequeue":
@@ -67,8 +75,8 @@ public class OrientationTask1_3 {
 
                     OrientationTask1_3 queuedCustomers = queue.removeLast();
                     queuedCustomers.setEndTime(System.currentTimeMillis());
-                    System.out.println("Customer " + queuedCustomers.getId() + " dequeued.");
-                    System.out.println("Time spent in queue: " + queuedCustomers.getTotalTimeSpent() + " ms");
+                    System.out.println("Customer " + queuedCustomers.getId() + " dequeued at " + formatTime(queuedCustomers.getEndTime()) + ".");
+                    System.out.println("Time spent in queue: " + queuedCustomers.getTotalTimeSpent()/1000 + "s");
                     break;
 
                 case "exit":
@@ -80,5 +88,24 @@ public class OrientationTask1_3 {
                     System.out.println("Invalid input.");
             }
         }
+    }
+}
+
+class ServicePoint {
+    public static void main(String[] args) {
+        LinkedList<ServicePoint> serviceQueue = new LinkedList<>();
+    }
+
+    public serve() {
+        ServicePoint servicePoint = new ServicePoint();
+    }
+
+    public void addToQueue(String customer) {
+        ServicePoint servicePoint = new ServicePoint();
+        serviceQueue.addFirst(servicePoint);
+    }
+
+    public void removeFromQueue(String customer) {
+        ServicePoint servicePoint = new ServicePoint();
     }
 }
