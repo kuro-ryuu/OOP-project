@@ -4,7 +4,9 @@ import java.time.format.DateTimeFormatter;
 import java.time.Instant;
 import java.time.ZoneId;
 
-public class OrientationTask1 {
+
+// taks 4
+public class OrientationTask1_3_4_5 {
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
 
     private static String formatTime(long millis) {
@@ -61,7 +63,7 @@ public class OrientationTask1 {
 }
 
 
-
+// task 3
 class Customer {
     private static int nextId = 1;
     private int id;
@@ -103,7 +105,7 @@ class Customer {
 }
 
 
-
+// task 5
 class ServicePoint {
     private LinkedList<Customer> servingQueue;
     public ServicePoint() {
