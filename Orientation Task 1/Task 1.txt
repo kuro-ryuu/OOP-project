@@ -1,0 +1,12 @@
+Simulations, as the name suggested, allow real life scenarios or expected experiments to be operated and run 
+within a controlled environment that allows unlimited control for expected outcomes (with the only limitation 
+being the simulation’s complexity).
+
+With simulations, large scale experiments or conditionally challenging tests can be conducted with low margin of 
+error under the sufficient level of sophistication programs. 
+
+For example, in order to stop incoming cosmic threats such as asteroids or solar flare, conducting a real life 
+test would be near impossible as these scenarios are very unlikely to happen frequently enough to be able to 
+create a solid plan. However, by applying the real life scenario into a simulation that has been developed using 
+accurate programming data, these same threats can be simulated over and over which helps create a solid foundation
+and helps the astronomers having an idea of what to do.

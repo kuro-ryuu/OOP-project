@@ -1,0 +1,16 @@
+Scenario: Restaurant
+
+- Variability:
++ Accidents inside the kitchen.
++ Equipment malfunction.
++ Supply quality drops.
++ …
+
+- Interconnectedness:
++ Restaurant order supply from third parties -> Supply gets delivered in bulk 
+-> Supplies get used to make food by chefs and cooks -> Food then gets served by waiters/waitresses
+
+- Complexity:
++ Waitresses/Waiters are not guaranteed to take the shortest path every time they pick up the food and go to the table.
++ The served portions are not guaranteed to be the exact same every time.
++ Service’s quality may fluctuate through time depending on the batch of staff.
