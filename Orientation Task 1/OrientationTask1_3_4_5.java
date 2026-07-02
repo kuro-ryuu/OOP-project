@@ -45,16 +45,17 @@ public class OrientationTask1_3_4_5 {
                     }
 
                     else {
-                        System.out.println("Servving customer(s)....");
+                        System.out.println("Serving customer(s)....");
                     }
                     servicePoint.serve();
+                    System.out.println("Service completed.");
                     break;
 
                 case "e":
                     System.out.println("Program exited.");
                     scanner.close();
                     return;
-
+                
                 default:
                     System.out.println("Invalid input.");
             }
@@ -107,7 +108,7 @@ class Customer {
 
 // task 5
 class ServicePoint {
-    private LinkedList<Customer> servingQueue;
+    public LinkedList<Customer> servingQueue = new LinkedList<>();
     public ServicePoint() {
         this.servingQueue = new LinkedList<>();
     }
